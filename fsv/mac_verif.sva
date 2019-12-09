@@ -1,0 +1,32 @@
+module mac_verif
+  (inout logic [15:0] a_t, a_f, a_ack,
+   inout logic [15:0] b_t, b_f, b_ack,
+   inout logic [31:0] out_t, out_f, out_ack,
+   inout logic        clk, reset);
+
+   for (genvar i=0; i < 16; i++) begin
+      assume property (@(posedge clk) $onehot0({a_t[i], a_f[i]}));
+      assume property (@(posedge clk) !a_ack[i] |=> $onehot({a_t[i], a_f[i]}));
+      assume property (@(posedge clk) a_ack[i] |=> !{a_t[i], a_f[i]});
+      assume property (@(posedge clk) $stable(a_ack[i]) |=> $stable({a_t[i], a_f[i]}));
+      assert property (@(posedge clk) $rose(a_ack[i]) |=> $past(a_t[i]) | $past(a_f[i]));
+      cover  property (@(posedge clk) a_ack[i]);
+
+      assume property (@(posedge clk) $onehot0({b_t[i], b_f[i]}));
+      assume property (@(posedge clk) !b_ack[i] |=> $onehot({b_t[i], b_f[i]}));
+      assume property (@(posedge clk) b_ack[i] |=> !{b_t[i], b_f[i]});
+      assume property (@(posedge clk) $stable(b_ack[i]) |=> $stable({b_t[i], b_f[i]}));
+      assert property (@(posedge clk) $rose(b_ack[i]) |=> $past(b_t[i]) | $past(b_f[i]));
+      cover  property (@(posedge clk) b_ack[i]);
+   end
+
+   for (genvar i=0; i < 32; i++) begin
+      assume property (@(posedge clk) (out_t[i] | out_f[i]) |=> out_ack[i]);
+      assume property (@(posedge clk) !{out_t[i], out_f[i]} |=> !out_ack[i]);
+      assume property (@(posedge clk) $stable({out_t[i], out_f[i]}) |=> $stable(out_ack[i]));
+      assert property (@(posedge clk) $onehot0({out_t[i], out_f[i]}));
+   end
+
+endmodule // mac_verif
+
+bind mac mac_verif mac_verif (.*);
