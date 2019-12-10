@@ -1,0 +1,46 @@
+Boundary outputs mapping check:
+Complete
+ 
+Boundary outputs proof check:
+Complete
+
+Imported properties proof check:
+Complete
+
+
+Reset value abstraction check:
+Complete
+
+X signals and undrivens check:
+    Complete
+    
+Mapped stopats check:
+    Complete
+    
+Assumptions conflict check:
+Complete
+
+Assumptions on driven signals check:
+Complete
+
+
+
+   Signoff Summary
+=====================
+Boundary outputs mapping         - Complete
+Boundary outputs proof           - Complete
+Imported properties proof        - Complete
+Reset value abstraction          - Complete
+X signals and undrivens          - Complete
+Mapped stopats                   - Complete
+Assumptions conflict check       - Complete
+Assumptions on driven signals    - Complete
+
+Overall SEC status - Complete
+
+
+Verification targets valid statuses summary:
+============================================
+#proven:1  #unprocessed:0  #undetermined:0  #cex:0 #unreachable-precondition:0
+All user targets are proven.
+

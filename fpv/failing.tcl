@@ -19,3 +19,5 @@ reset reset
 get_design_info
 
 prove -all
+
+report -file failing.rpt

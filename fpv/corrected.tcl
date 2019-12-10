@@ -18,3 +18,5 @@ reset reset
 get_design_info
 
 prove -all
+
+report -file corrected.rpt

@@ -52,4 +52,5 @@ check_sec -gen
 check_sec -prove
 
 # Run SignOff
-check_sec -signoff
+check_sec -signoff -file sec.rpt
+

@@ -1,0 +1,44 @@
+
+==============================================================
+    JasperGold Verification Results
+==============================================================
+    2018.06p002 64 bits for Linux 2.6.32-754.17.1.el6.x86_64
+    Host Name: gaphl01
+    User Name: msartori
+    Printed on: Tuesday, 10 December 2019 10:52:02 o'clock FNT
+    Working Directory: /home/msartori/developer/phd/classes/verif/fpv
+
+
+==============================================================
+RESULTS
+==============================================================
+
+---------------------------------------------------------------------------------------------------------------------------
+       Name                                                               |    Result    |  Engine  |  Bound  |  Time    
+---------------------------------------------------------------------------------------------------------------------------
+
+---[ <embedded> ]----------------------------------------------------------------------------------------------------------
+[1]   sanduba.sanduba_checker.busy_no_input_assumption:precondition1           covered         N           2      0.072 s      
+[2]   sanduba.sanduba_checker.counter_limit_chk                                proven          N    Infinite      0.734 s      
+[3]   sanduba.sanduba_checker.counter_limit_cover                              covered         N           1      0.072 s      
+[4]   sanduba.sanduba_checker.single_output_chk                                proven          Hp   Infinite      0.001 s      
+[5]   sanduba.sanduba_checker.single_output_cover                              covered         N           1      0.072 s      
+[6]   sanduba.sanduba_checker.busy_after_input_chk                             proven          Hp   Infinite      0.013 s      
+[7]   sanduba.sanduba_checker.busy_after_input_chk:precondition1               covered         N           2      0.072 s      
+[8]   sanduba.sanduba_checker.busy_after_input_cover                           covered         N           2      0.072 s      
+[9]   sanduba.sanduba_checker.multiple_requests_chk                            proven          N        (79)      50.604 s     
+[10]  sanduba.sanduba_checker.multiple_requests_chk:precondition1              covered         Hp          1      0.002 s      
+[11]  sanduba.sanduba_checker.ret_money_chk                                    proven          N        (72)      59.045 s     
+[12]  sanduba.sanduba_checker.ret_money_chk:precondition1                      covered         Hp          1      0.003 s      
+[13]  sanduba.sanduba_checker.request_green_nofund_chk                         proven          N        (33)      0.379 s      
+[14]  sanduba.sanduba_checker.request_green_nofund_chk:precondition1           covered         Hp          1      0.006 s      
+[15]  sanduba.sanduba_checker.request_atum_nofund_chk                          proven          N        (26)      0.653 s      
+[16]  sanduba.sanduba_checker.request_atum_nofund_chk:precondition1            covered         Hp          1      0.007 s      
+[17]  sanduba.sanduba_checker.request_bacon_nofund_chk                         proven          N        (23)      1.040 s      
+[18]  sanduba.sanduba_checker.request_bacon_nofund_chk:precondition1           covered         Hp          1      0.012 s      
+[19]  sanduba.sanduba_checker.request_green_chk                                proven          Tri       (0)      1.019 s      
+[20]  sanduba.sanduba_checker.request_green_chk:precondition1                  covered         Hp          5      0.019 s      
+[21]  sanduba.sanduba_checker.request_atum_chk                                 proven          Tri       (0)      2.280 s      
+[22]  sanduba.sanduba_checker.request_atum_chk:precondition1                   covered         Hp          7      0.022 s      
+[23]  sanduba.sanduba_checker.request_bacon_chk                                proven          Tri       (0)      1.042 s      
+[24]  sanduba.sanduba_checker.request_bacon_chk:precondition1                  covered         Hp          9      0.026 s      
