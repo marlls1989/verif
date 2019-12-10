@@ -18,4 +18,4 @@ set_load 0.5 [all_output]
 syn_generic
 syn_map
 syn_opt
-write_hdl > netlist.v
+write_hdl -generic > netlist.v

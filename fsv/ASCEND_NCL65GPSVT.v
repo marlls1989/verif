@@ -16,8 +16,71 @@
 // Ney Laert Vilar Calazans
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-
 `timescale 1ns/10ps
+
+`celldefine
+module HS65_GS_IVX9(Z, A);
+output Z;
+input A;
+assign Z = ~A;
+endmodule
+`endcelldefine
+
+`celldefine
+module HS65_GS_IVX2(Z, A);
+output Z;
+input A;
+assign Z = ~A;
+endmodule
+`endcelldefine
+
+`celldefine
+module HS65_GS_IVX7(Z, A);
+output Z;
+input A;
+assign Z = ~A;
+endmodule
+`endcelldefine
+
+`celldefine
+module HS65_GS_IVX4(Z, A);
+output Z;
+input A;
+assign Z = ~A;
+endmodule
+`endcelldefine
+
+`celldefine
+module HS65_GS_BFX9(Z, A);
+output Z;
+input A;
+assign Z = A;
+endmodule
+`endcelldefine
+
+`celldefine
+module HS65_GS_BFX7(Z, A);
+output Z;
+input A;
+assign Z = A;
+endmodule
+`endcelldefine
+
+`celldefine
+module HS65_GS_BFX13(Z, A);
+output Z;
+input A;
+assign Z = A;
+endmodule
+`endcelldefine
+
+`celldefine
+module HS65_GS_BFX4(Z, A);
+output Z;
+input A;
+assign Z = A;
+endmodule
+`endcelldefine
 
 primitive INCL1W1111OF4_Q(Q, A, B, C, D);
 output Q;
